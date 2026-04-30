@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Averia Libre', cursive;
+    background-color: #FFD100;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#chat-window {
+    width: 400px;
+    height: 600px;
+    background: #FFF9E5;
+    border-radius: 30px;
+    border: 4px solid #4B164C;
+    box-shadow: 8px 8px 0px rgba(75, 22, 76, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-header {
+    background: #4B164C; /* Diep paars van het hoofdlogo */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 4px solid #4B164C;
+}
+
+#chat-title {
+    color: #FFD100; /* Geel contrast */
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: lowercase; /* Maakt het speelser */
+}
+
+#chat-messages {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    overflow-y: auto;
+    background-image: radial-gradient(#e5e0cc 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.user-message {
+    background: #4B164C;
+    color: #fff;
+    align-self: flex-end;
+    padding: 12px 18px;
+    border-radius: 20px 20px 0px 20px;
+    max-width: 85%;
+    font-size: 16px;
+    line-height: 1.4;
+    border: 2px solid #4B164C;
+}
+
+.server-message {
+    background: #5DB1D1;
+    color: #fff;
+    align-self: flex-start;
+    padding: 12px 18px;
+    border-radius: 20px 20px 20px 0px;
+    max-width: 85%;
+    font-size: 16px;
+    line-height: 1.4;
+    border: 3px solid #4B164C; /* Contrast omlijning */
+    box-shadow: 4px 4px 0px rgba(75, 22, 76, 0.1);
+}
+
+.token-info {
+    display: block;
+    font-size: 0.75rem;
+    color: #144d80;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+#chat-form {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    background: #FFF9E5;
+    border-top: 4px solid #4B164C;
+}
+
+#chat-input {
+    flex: 1;
+    border: 3px solid #4B164C;
+    border-radius: 15px;
+    padding: 12px 16px;
+    font-family: 'Averia Libre', cursive;
+    font-size: 16px;
+    background: #fff;
+    outline: none;
+}
+
+#chat-input:focus {
+    background: #FEF3C7;
+}
+
+#send-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background: #E84C3D;
+    border: 3px solid #4B164C;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+#send-btn:hover {
+    transform: rotate(-5deg) scale(1.1);
+    background: #ff5e4d;
+}
+
+#chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+#chat-messages::-webkit-scrollbar-thumb {
+    background: #4B164C;
+    border-radius: 10px;
+}
