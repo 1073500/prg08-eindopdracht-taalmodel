@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 app.get('/api/test', async (req, res) => {
     const response = await callAssistant("Where does Troy Parrott currently play?")
-   // console.log(response)
+   console.log(response)
     res.json({ response })
 })
 
